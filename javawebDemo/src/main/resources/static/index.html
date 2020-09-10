@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>javaweb</title>
+</head>
+<body>
+
+<div>
+    <form id = "save" action="/vaccines/save" method="post">
+        疫苗名称：
+        <input type="text" name="name"></br>
+        生产企业：
+        <input type="text" name="owner"></br>
+        批次：
+        <input type="text" name="batch"></br>
+        数量：
+        <input type="text" name="num"></br>
+        <input type="submit" value="提交">
+    </form>
+</div>
+</body>
+</html>

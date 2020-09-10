@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/javaweb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: UserHan
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  thymeleaf:
+    prefix: classpath:/static/
+    suffix: .html
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: com/lhf/mapper/xml/*.xml
+server:
+  port: 8181
