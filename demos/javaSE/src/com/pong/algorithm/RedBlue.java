@@ -1,5 +1,6 @@
 package com.pong.algorithm;
 
+import java.io.Serializable;
 import java.util.Scanner;
 /**
  * 有一个非常经典的概率问题，是一个袋子里面有若干个红球和若干个蓝球，
@@ -12,16 +13,18 @@ import java.util.Scanner;
  * 没错，C就是来捣乱的，他除了可以使得袋子里面减少一个球，没有其他任何意义，
  * 而A，B谁 先拿到红球就可以获得胜利，但是由于C的存在，两人可能都拿不到红球，此时B获得胜利。
  */
-public class RedBlue {
-
+public class RedBlue implements Serializable {
     public static void main(String[] args) {
+        boolean b;
+        System.out.println(b = (0 < 10));
+        float fa[];
         Scanner reader = new Scanner(System.in);
         while (reader.hasNext()) {
-            System.out.printf("%.5f", new RedBlue().solution(reader.nextInt(), reader.nextInt()));
+            System.out.printf("%.5f", solution(reader.nextInt(), reader.nextInt()));
         }
     }
 
-    private double solution(int n, int m) {
+    private static double solution(int n, int m) {
         double[][] dp = new double[n + 1][m + 1];
         for (int i = 1; i <= n; i++) {
             dp[i][0] = 1.0;

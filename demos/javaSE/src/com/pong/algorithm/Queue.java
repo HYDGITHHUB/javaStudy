@@ -12,9 +12,9 @@ public class Queue {
     public static void main(String[] args) {
         int md = 10000007;
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int[] m = new int[n];
-        int[][] dp = new int[n + 1][n + 1];
+        long n = sc.nextInt();
+        long[] m = new long[(int) n];
+        long[][] dp = new long[(int) (n + 1)][(int) (n + 1)];
         for (int i = 0; i < n - 1; i++) {
             m[i] = sc.nextInt();
         }
@@ -23,7 +23,7 @@ public class Queue {
         }
         for (int i = 1; i < n; i++) {
             if (m[i - 1] == 1) {
-                for (int j = n - i - 1; j >= 0; j--) {
+                for (int j = (int) (n - i - 1); j >= 0; j--) {
                     dp[i][j] += (dp[i - 1][j + 1] + dp[i][j + 1]) % md;
                     dp[i][j] %= md;
                 }
@@ -35,7 +35,7 @@ public class Queue {
                 }
             }
         }
-        System.out.println(dp[n - 1][0]);
+        System.out.println(dp[(int) (n - 1)][0]);
         sc.close();
     }
 }
