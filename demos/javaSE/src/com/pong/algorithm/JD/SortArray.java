@@ -1,9 +1,6 @@
 package com.pong.algorithm.JD;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Scanner;
-import java.util.Set;
+import java.util.*;
 
 public class SortArray {
 
@@ -38,7 +35,7 @@ public class SortArray {
             nums[i+n] = scanner.nextInt();
         }
         Arrays.sort(nums);
-        Set<Integer> set = new HashSet<>();
+        TreeSet<Integer> set = new TreeSet<>();
         for (int i = 0; i < nums.length; i++) {
             set.add(nums[i]);
         }
