@@ -19,10 +19,10 @@ public class Main2 {
         int m = scanner.nextInt();
         int s = scanner.nextInt();
         int t = scanner.nextInt();
-        int[][] nums = new int[3][m];
+        int[][] nums = new int[m][3];
         for (int i = 0; i < m; i++) {
             for (int i1 = 0; i1 < 3; i1++) {
-                nums[i1][i] = scanner.nextInt();
+                nums[i][i1] = scanner.nextInt();
             }
         }
         //处理数据
@@ -36,18 +36,32 @@ public class Main2 {
         int begin = s;
         int last = 0;
         int end = t;
+        int min = Integer.MAX_VALUE;
         for (int i = 0; i < nums.length; i++) {
             if (nums[i][0] == begin) {
-                last = nums[i][1];
-                count += nums[i][2];
-                if (last == end) break;
+                //直通
+                if (end == nums[i][1]) {
+                    count = nums[i][2];
+                } else {
+                    //间接到达
+                    //last:中转节点
+                    last =nums[i][1];
+                    count = nums[i][2];
+                    for (int j = 0; j < nums.length; j++) {
+                        if (nums[j][0] == last) {
+                            last = nums[j][1];
+                            j = 0;
+                        }
+                        if (last == end) break;
+                    }
+                    if (last != end) count = Integer.MAX_VALUE;
+                }
             }
+            min = count < min ? count : min;
         }
-        return count;
+        return min;
     }
-
 }
-
 //5 6 1 5
 //1 5 100
 //1 2 10

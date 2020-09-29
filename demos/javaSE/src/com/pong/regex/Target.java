@@ -1,4 +1,4 @@
-package com.pong.pattern;
+package com.pong.regex;
 
 import java.util.regex.Pattern;
 

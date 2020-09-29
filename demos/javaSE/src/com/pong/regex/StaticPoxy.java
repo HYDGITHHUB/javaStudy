@@ -1,4 +1,4 @@
-package com.pong.pattern;
+package com.pong.regex;
 
 public class StaticPoxy {
     public static void main(String[] args) {
