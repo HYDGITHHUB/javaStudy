@@ -38,7 +38,7 @@
 >
 >多态
 >
->GIT,举个场景,如何恢复
+>GIT,举个场景,如何恢复(git log git reset --hard || git revert -n *** git commit git push)
 >
 >讲讲HashMap的底层实现  
 >[红黑树]()是什么，为什么HashMap要用[红黑树]()  
@@ -75,11 +75,11 @@
 >
 > 栈帧里面有什么？局部变量表里存的是什么，比如对于（int a = 1; Integer b = new Integer()） 
 >
-> 如何设置栈大小，堆大小，新生代老年代大小——JVM参数 
+> 如何设置栈大小，堆大小，新生代老年代大小——JVM参数 (设置新生代大小:java -Xms20m -Xmn10M GCDemo)(栈空间:java -Xss2m GCDemo)
 >
 > 说说堆及对应的垃圾回收器？ 
 >
-> CMS具体流程，STW是什么？用的什么垃圾回收[算法]()？为什么先初始标记再并发标记； 
+> CMS具体流程，STW是什么？用的什么垃圾回收算法始标记再并发标记； (CMS:标记清除算法的GC,针对老年代)
 >
 > G1 原理？标记清除[算法]()存在的问题？ 
 >
@@ -89,11 +89,9 @@
 >
 > 创建一个对象的过程？ 
 >
-> 方法区主要放什么，会垃圾回收吗？方法区用的什么垃圾回收？方法区在对里面吗？
+> 方法区主要放什么，会垃圾回收吗？方法区用的什么垃圾回收？方法区堆里面吗？
 >
 >jvm堆结构、创建对象过程、判断垃圾方法、垃圾回收算法
->
->syschronized和reentrantlock对比和原理、aqs原理、aqs公平锁和非公平锁、非公平锁实现原理
 >
 >虚拟内存机制
 >
@@ -119,13 +117,11 @@
 >
 >JMM
 >
->threadlocal内存泄露问题
->
->俩对象循环引用是否会被AC
+>俩对象循环引用是否会被GC
 >
 >对象在内存中的存储结构
 >
->死锁的排查
+>死锁的排查(jps -l ,jstack -l 12316)
 >
 >对象分配在哪里
 >
@@ -143,9 +139,13 @@
 >
 >线程保活怎么实现
 >
+>syschronized和reentrantlock对比和原理、aqs原理、aqs公平锁和非公平锁、非公平锁实现原理
+>
 >线程的三种实现方式
 >
 >对象头里的锁标志位干啥的？
+>
+>threadlocal内存泄露问题
 >
 >共享锁和排他锁
 >
@@ -490,7 +490,7 @@
 
 ![image-20200929153724369](C:\Users\userhan\AppData\Roaming\Typora\typora-user-images\image-20200929153724369.png)![image-20200929153737682](C:\Users\userhan\AppData\Roaming\Typora\typora-user-images\image-20200929153737682.png)
 
-
+![image-20200930082932331](C:\Users\userhan\AppData\Roaming\Typora\typora-user-images\image-20200930082932331.png) 
 
 ## 不足
 
@@ -501,3 +501,5 @@
 >网络编程
 >
 >反射
+>
+>线程安全的集合
