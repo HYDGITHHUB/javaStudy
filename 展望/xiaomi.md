@@ -2,23 +2,23 @@
 
 ## Java
 
->hashCode 和 equals,什么时候可以只重写equals而不重写hashcode
+>hashCode 和 equals,什么时候可以只重写equals而不重写hashcode(https://zhuanlan.zhihu.com/p/102248677)
 >
 >java何时会用到wait()
 >
->Cglib与JDK的动态规划
+>Cglib与JDK的动态规划(https://blog.csdn.net/yhl_jxy/article/details/80635012)
 >
->static
+>statict
 >
->序列化的作用(实现Serializable 接口)
+>序列化的作用(实现Serializable 接口)(https://zhuanlan.zhihu.com/p/66210653)
 >
 >IO
 >
->深拷贝和浅拷贝(深拷贝:实现CloneAble类并且重写clone方法)
+>深拷贝和浅拷贝(深拷贝:实现CloneAble类并且重写clone方法)(https://juejin.im/post/6844903806577164302)
 >
->为什么用ArrayDeque而不用Java提供的Stack
+>为什么用ArrayDeque而不用Java提供的Stack(https://www.cnblogs.com/jiading/articles/12452830.html)
 >
->Java arraylist 和 linkedlist的区别，arraylist的扩容；
+>Java arraylist 和 linkedlist的区别，arraylist的扩容；(https://blog.csdn.net/eson_15/article/details/51145788)()
 >
 >数组和[链表](https://www.nowcoder.com/jump/super-jump/word?word=链表)区别？对于读写频繁的情况，用什么数据结构？B+树
 >
@@ -28,11 +28,11 @@
 >
 >线程安全的数据结构
 >
->stringbuild stringbuffer
+>stringbuild stringbuffer(https://www.jianshu.com/p/8c724dd28fa4)(初始长度:16,扩容:创建一个新的数组,然后进行复制操作)
 >
->java特征(封装,继承,多态,抽象)
+>java特征(封装,继承,多态,抽象)(https://blog.csdn.net/a78270528/article/details/80018602)
 >
->HashMap中的hash有什么作用
+>HashMap中的hash有什么作用(https://blog.csdn.net/q5706503/article/details/85114159)
 >
 >put一个对象的过程
 >
@@ -57,7 +57,7 @@
 >
 >**hashmap**(1.7,1.8)和hashtable,怎么扩容,散列因子,散列表如何存放
 >
->hashmap的初始容量为什么是16，为什么每次扩容都是2倍扩容？
+>hashmap的初始容量为什么是16，为什么每次扩容都是2倍扩容？(https://blog.csdn.net/u014532901/article/details/78936283)
 >
 >equals 和 ==
 >
@@ -503,3 +503,29 @@
 >反射
 >
 >线程安全的集合
+>
+>JUC编程
+>
+>数据库(左连接,右连接)
+>
+>>JUC编程
+>>
+>>集合
+>>
+>>IO
+>>
+>>网络编程
+>>
+>>JVM
+
+## 整体
+
+>集合
+>
+>JUC编程
+>
+>IO
+>
+>网络编程
+>
+>JVM
